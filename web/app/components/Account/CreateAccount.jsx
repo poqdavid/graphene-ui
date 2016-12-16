@@ -4,6 +4,7 @@ import classNames from "classnames";
 import AccountActions from "actions/AccountActions";
 import AccountStore from "stores/AccountStore";
 import AccountNameInput from "./../Forms/AccountNameInput";
+import StealthPubKeyInput from "./../Forms/StealthPubKeyInput";
 import PasswordInput from "./../Forms/PasswordInput";
 import WalletDb from "stores/WalletDb";
 import notify from "actions/NotificationActions";
@@ -252,7 +253,10 @@ class CreateAccount extends React.Component {
 
                 <p>{!hasWallet ? <Translate content="wallet.has_wallet" /> : null}</p>
 
+                <Translate style={{textAlign: "left"}} component="p" content="wallet.create_account_text_stealth_accountasreq" />
                 <Translate style={{textAlign: "left"}} component="p" content="wallet.create_account_text" />
+                <Translate style={{textAlign: "left"}} component="p" content="wallet.create_account_text_stealth_priv" />
+                <Translate style={{textAlign: "left"}} component="p" content="wallet.create_account_text_stealth_pub" />
 
                 {firstAccount ? <Translate style={{textAlign: "left"}} component="p" content="wallet.first_account_paid" /> : null}
 
