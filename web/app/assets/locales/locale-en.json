@@ -20,6 +20,7 @@
     "explorer": "Explore",
     "exchange": "Exchange",
     "payments": "Send",
+	"stealth": "Stealth",
     "logout": "Logout",
     "settings": "Settings",
     "current": "Current Account",
@@ -34,6 +35,14 @@
   },
   "propose": "Propose",
   "cancel": "Cancel",
+  "stealth": {
+    "account": {
+      "pay": "Pay",
+      "overview": "Overview",
+      "transfer": "Transfer",
+      "receive": "Receive"
+    }
+  },
   "account": {
     "welcome": "Welcome to Bitshares",
     "asset": "Asset",

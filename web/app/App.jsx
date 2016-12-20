@@ -15,6 +15,10 @@ import CommitteeMembers from "./components/Explorer/CommitteeMembers";
 import Header from "components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import AccountPage from "./components/Account/AccountPage";
+import StealthPage from "./components/Stealth/StealthPage";
+import StealthAccountOverview from "./components/Stealth/StealthOverview";
+import StealthTransfer from "./components/Stealth/StealthTransferPage";
+import StealthReceive from "./components/Stealth/StealthReceivePage";
 import AccountOverview from "./components/Account/AccountOverview";
 import AccountAssets from "./components/Account/AccountAssets";
 import AccountAssetCreate from "./components/Account/AccountAssetCreate";
@@ -384,6 +388,26 @@ let routes = (
             <Route path="import-keys" component={ImportKeys}/>
             <Route path="brainkey" component={Brainkey}/>
             <Route path="balance-claim" component={BalanceClaimActive}/>
+        </Route>
+        <Route path="/account/:account_name" component={AccountPage}>
+        <IndexRoute component={AccountOverview}/>
+        <Route path="overview" component={AccountOverview}/>
+        <Route path="assets" component={AccountAssets}/>
+        <Route path="create-asset" component={AccountAssetCreate}/>
+        <Route path="update-asset/:asset" component={AccountAssetUpdate}/>
+        <Route path="member-stats" component={AccountMembership}/>
+        <Route path="vesting" component={AccountVesting}/>
+        <Route path="permissions" component={AccountPermissions}/>
+        <Route path="voting" component={AccountVoting}/>
+        <Route path="deposit-withdraw" component={AccountDepositWithdraw}/>
+        <Route path="orders" component={AccountOrders}/>
+        <Route path="whitelist" component={AccountWhitelist}/>
+    </Route>
+        <Route path="/stealth/:account_name" component={StealthPage}>
+            <IndexRoute component={StealthAccountOverview}/>
+            <Route path="overview" component={StealthAccountOverview}/>
+            <Route path="tstealth" component={StealthTransfer}/>
+            <Route path="rstealth" component={StealthReceive}/>
         </Route>
         <Route path="/account/:account_name" component={AccountPage}>
             <IndexRoute component={AccountOverview}/>
